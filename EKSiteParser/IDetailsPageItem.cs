@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EKSiteParser
+﻿namespace EK.SiteParser
 {
-    interface IDetailsPageItem
+    public interface IDetailsPageItem
     {
         string[] ImageUrls { get; set; }
         string[] Tags { get; set; }

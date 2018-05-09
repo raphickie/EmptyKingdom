@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0663E565-9AC6-46B5-911C-A621DDB16A31}</ProjectGuid>
+    <ProjectGuid>{4ABB4EEE-DEB2-4F72-8578-5A731B8936DD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VkPosterLib</RootNamespace>
-    <AssemblyName>VkPosterLib</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>EK.SiteParser</RootNamespace>
+    <AssemblyName>EK.SiteParser</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,8 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.6.17.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.17\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -44,12 +49,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IVkPoster.cs" />
+    <Compile Include="DetailsPageItem.cs" />
+    <Compile Include="DetailsPageParser.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IDetailsPageItem.cs" />
+    <Compile Include="IDetailsPageParser.cs" />
+    <Compile Include="IMainPageItem.cs" />
+    <Compile Include="IMainPageParser.cs" />
+    <Compile Include="IParserSettings.cs" />
+    <Compile Include="IEkSiteParser.cs" />
+    <Compile Include="MainPageItem.cs" />
+    <Compile Include="MainPageParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VkPoster.cs" />
+    <Compile Include="EkSiteParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EK.Core\EK.Core.csproj">
+      <Project>{c17eb603-77e7-48c1-9821-4d2145d82a92}</Project>
+      <Name>EK.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

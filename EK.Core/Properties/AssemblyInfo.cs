@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EK.SiteParser")]
+[assembly: AssemblyTitle("EK.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EK.SiteParser")]
+[assembly: AssemblyProduct("EK.Core")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4abb4eee-deb2-4f72-8578-5a731b8936dd")]
+[assembly: Guid("c17eb603-77e7-48c1-9821-4d2145d82a92")]
 
 // Version information for an assembly consists of the following four values:
 //

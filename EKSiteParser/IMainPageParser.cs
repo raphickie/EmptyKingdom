@@ -1,9 +1,8 @@
-﻿using System.Threading.Tasks;
-
-namespace EKSiteParser
+﻿
+namespace EK.SiteParser
 {
     public interface IMainPageParser
     {
-        Task<IMainPageItem> GetLastMessagesAsync(string pageText);
+        IMainPageItem[] ParseLastMessages(string pageText);
     }
 }

@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4ABB4EEE-DEB2-4F72-8578-5A731B8936DD}</ProjectGuid>
+    <ProjectGuid>{C17EB603-77E7-48C1-9821-4D2145D82A92}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EKSiteParser</RootNamespace>
-    <AssemblyName>EKSiteParser</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>EK.Core</RootNamespace>
+    <AssemblyName>EK.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,11 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDetailsPageItem.cs" />
-    <Compile Include="IDetailsPageParser.cs" />
-    <Compile Include="IMainPageItem.cs" />
-    <Compile Include="IMainPageParser.cs" />
-    <Compile Include="MainPageParser.cs" />
+    <Compile Include="HttpGetter.cs" />
+    <Compile Include="IHttpGetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

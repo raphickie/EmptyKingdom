@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace EKSiteParser
+namespace EK.SiteParser
 {
-    interface IDetailsPageParser
+    public interface IDetailsPageParser
     {
-        Task<IDetailsPageItem[]> ParseDetailsAsync();
+        IDetailsPageItem ParseDetails(string pageText);
     }
 }
