@@ -25,7 +25,7 @@ namespace EK.EmptyKingdom.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2016-02-21")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2018-05-03")]
         public global::System.DateTime LastArticleDate {
             get {
                 return ((global::System.DateTime)(this["LastArticleDate"]));

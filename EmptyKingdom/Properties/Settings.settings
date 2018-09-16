@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="LastArticleDate" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2016-02-21</Value>
+      <Value Profile="(Default)">2018-05-03</Value>
     </Setting>
   </Settings>
 </SettingsFile>

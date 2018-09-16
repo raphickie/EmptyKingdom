@@ -40,16 +40,19 @@ namespace EK.SiteParser
 							.Select(i => i.Attributes["src"].Value).ToArray();
 
 						var tagsSpan = bodyNode.Descendants("span")
-							.First(d => d.HasClass("tags-links"));
-						if (tagsSpan == null)
-							return null;
+							.FirstOrDefault(d => d.HasClass("tags-links"));
 
-						var tags = tagsSpan.ParentNode.Descendants("a")
-							.Where(a => a.Attributes.Contains("rel") &&
-										a.Attributes["rel"].Value == "tag")
-							.Select(a => a.InnerText.Replace(" ", string.Empty))
-							.Except(new[] { "website" })
-							.ToArray();
+						string[] tags;
+
+						if (tagsSpan == null)
+							tags = new string[0];
+						else
+							tags = tagsSpan.ParentNode.Descendants("a")
+							   .Where(a => a.Attributes.Contains("rel") &&
+										   a.Attributes["rel"].Value == "tag")
+							   .Select(a => a.InnerText.Replace(" ", string.Empty))
+							   .Except(new[] { "website" })
+							   .ToArray();
 
 						return new DetailsPageItem(imagePaths, tags);
 					}
