@@ -1,5 +1,4 @@
-﻿using EK.EmptyKingdom.Properties;
-using EK.SiteParser;
+﻿using EK.SiteParser;
 using EK.VkPosterLib;
 using log4net;
 using System;
@@ -21,7 +20,7 @@ namespace EK.EmptyKingdom
 			_ekSiteParser = ekSiteParser;
 			_vkPostCreator = vkPostCreator;
 			_parserSettings = parserSettings;
-			_logger = LogManager.GetLogger(this.GetType().Name);
+			_logger = LogManager.GetLogger(GetType().Name);
 		}
 
 		public async Task UpdateWallAsync()

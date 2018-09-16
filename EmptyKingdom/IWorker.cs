@@ -2,8 +2,8 @@
 
 namespace EK.EmptyKingdom
 {
-    public interface IWorker
-    {
-        Task UpdateWallAsync();
-    }
+	public interface IWorker
+	{
+		Task UpdateWallAsync();
+	}
 }

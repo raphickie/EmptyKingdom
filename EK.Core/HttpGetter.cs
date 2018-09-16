@@ -4,18 +4,25 @@ using System.Threading.Tasks;
 
 namespace EK.Core
 {
-    public class HttpGetter:IHttpGetter
-    {
-        public async Task<string> GetStringAsync(string query)
-        {
-            if (query == null) throw new ArgumentNullException(nameof(query));
+	public class HttpGetter : IHttpGetter
+	{
+		private readonly HttpClient _client;
 
-            using (var client = new HttpClient())
-            {
-                var response = await client.GetAsync(query);
-                var responseText = await response.Content?.ReadAsStringAsync();
-                return responseText;
-            }
-        }
-    }
+		public HttpGetter(HttpClient client)
+		{
+			_client = client;
+		}
+
+		public async Task<string> GetStringAsync(string query)
+		{
+			if (query == null) throw new ArgumentNullException(nameof(query));
+
+			return await _client.GetStringAsync(query);
+		}
+
+		public void Dispose()
+		{
+			_client.Dispose();
+		}
+	}
 }

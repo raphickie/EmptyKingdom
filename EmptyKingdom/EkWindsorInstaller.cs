@@ -11,7 +11,6 @@ namespace EK.EmptyKingdom
         {
             var classes = Types.FromThisAssembly();
             var r = container.Register(Classes.FromAssembly(Assembly.GetExecutingAssembly()));
-            //.Configure(c => c.LifeStyle.));
         }
     }
 }
